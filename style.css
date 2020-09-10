@@ -4,8 +4,12 @@
     background-color: #222831;
 }
 
+#js-clock{
+    height: 90vh;
+}
+
 #digital-clock{
-    height: 100vh;
+    height: 60vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -15,4 +19,27 @@
     font-size: 2.5em;
     font-weight: bold;
     text-shadow: 0 0 15px #00c4cb;
+}
+
+#alarm-clock{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    height: 10vh;
+}
+
+#alarm-clock select{
+    margin-left: 20px;
+    border: 3px solid #00c4cb;
+    color: #00c4cb;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#alarm-btn{
+   background-color: #00c4cb;
+    color: #222831;
+    padding: 10px;
+    border-radius: 10px;
 }

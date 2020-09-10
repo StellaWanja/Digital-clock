@@ -7,10 +7,26 @@
     <title>Digital Clock</title>
 </head>
 <body>
+
+<div id="js-clock">
     <div id="digital-clock">
         <div id="date"></div>
         <div id="time"></div>
     </div>
+
+    <div id="alarm-clock">
+        <select name="alarm-hour" id="alarm-hour"></select>
+        <select name="alarm-min" id="alarm-min"></select>
+        <select name="alarm-sec" id="alarm-sec"></select>
+        <select name="alarm-session" id="alarm-session">
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+        </select>
+    </div>
+
+    <button id="alarm-btn">Set alarm</button>
+</div>
+
     <script src="index.js"></script>
 </body>
 </html>

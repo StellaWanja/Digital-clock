@@ -2,44 +2,58 @@
     margin: 0;
     padding: 0;
     background-color: #222831;
+    font-family: 'Orbitron', sans-serif;
 }
 
 #js-clock{
     height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 #digital-clock{
-    height: 60vh;
-    display: flex;
-    align-items: center;
     flex-direction: column;
     justify-content: center;
-    font-family: 'Orbitron', sans-serif;
     color: #00c4cb;
     font-size: 2.5em;
+    text-align: center;
     font-weight: bold;
     text-shadow: 0 0 15px #00c4cb;
 }
 
 #alarm-clock{
-    display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: center;
-    height: 10vh;
+    margin-top: 50px;
+}
+
+#alarm-clock h1{
+    text-align: center;
+    color: #00c4cb;
+    font-size: 1.5em;
 }
 
 #alarm-clock select{
-    margin-left: 20px;
-    border: 3px solid #00c4cb;
     color: #00c4cb;
-    padding: 10px;
-    border-radius: 10px;
+    border: 3px solid #00c4cb;
+    border-radius: 5px;
+    margin-left: 10px;
+    padding: 5px;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
 #alarm-btn{
-   background-color: #00c4cb;
+    background-color: #00c4cb;
     color: #222831;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
+    border: #00c4cb;
+    margin-top: 10px;
+    cursor: pointer;
+    margin-left: 30%;
 }

@@ -9,23 +9,35 @@
 <body>
 
 <div id="js-clock">
+<!--    clock-->
     <div id="digital-clock">
         <div id="date"></div>
         <div id="time"></div>
     </div>
 
+<!--    alarm clock-->
     <div id="alarm-clock">
-        <select name="alarm-hour" id="alarm-hour"></select>
-        <select name="alarm-min" id="alarm-min"></select>
-        <select name="alarm-sec" id="alarm-sec"></select>
-        <select name="alarm-session" id="alarm-session">
+        <h1>Set Alarm</h1>
+        <select id="alarm-hr"></select>
+        <select id="alarm-min"></select>
+        <select id="alarm-sec"></select>
+        <select id="alarm-session">
             <option value="AM">AM</option>
             <option value="PM">PM</option>
         </select>
-    </div>
 
-    <button id="alarm-btn">Set alarm</button>
+        <div>
+            <button id="alarm-btn">Set alarm</button>
+<!--            <input type="button" value="Set" id="alarm-btn"/>-->
+<!--            <input type="button" value="Reset" id="alarm-btn-reset" disabled/>-->
+        </div>
+    </div>
 </div>
+
+<!--    ALARM SOUND-->
+<!--    <audio id="alarm-sound" loop>-->
+<!--        <source src="Journey.mp3" type="audio/mp3">-->
+<!--    </audio>-->
 
     <script src="index.js"></script>
 </body>

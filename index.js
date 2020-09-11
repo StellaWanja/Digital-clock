@@ -32,9 +32,11 @@ const clockTime = () => {
     setTimeout(clockTime, 1000);
 }
 
+const alarmAudio = new Audio("Journey.mp3");
+alarmAudio.loop = true;
+
 const setAlarm = () => {
-    let alarmClock = document.getElementById("alarm-clock");
-    let alarmHour = document.getElementById("alarm-hour");
+    let alarmHour = document.getElementById("alarm-hr");
     let alarmMin = document.getElementById("alarm-min");
     let alarmSec = document.getElementById("alarm-sec");
     let alarmSession = document.getElementById("alarm-session");
@@ -42,8 +44,9 @@ const setAlarm = () => {
 
     let alarmElement;
     let activeAlarm = false;
-    let alarmAudio = new Audio("Journey.mp3");
-    alarmAudio.loop = true;
+    // let alarmAudio = new Audio("Journey.mp3");
+    // alarmAudio.loop = true;
+
 
     const alarmMinSec = (id) => {
         let select = id;
@@ -53,6 +56,7 @@ const setAlarm = () => {
             select.options[select.options.length] = new Option(i<10 ? "0" + i: i);
         }
     }
+
     const alarmHr = (id) => {
         let select = id;
         let maxHr = 12;
@@ -70,9 +74,25 @@ const setAlarm = () => {
             alarmSession.disabled = true;
 
             alarmElement = alarmHour.value + ":" + alarmMin.value + ":" + alarmSec.value + "" + alarmSession.value;
-            this.textContent = "Clear Alarm";
+            alarmBtn.textContent = "Clear Alarm";
             activeAlarm = true;
+
+            let currentTime = new Date().toLocaleTimeString();
+            if (currentTime === alarmElement){
+                alarmAudio.play().then();
+            }
+        } else {
+            alarmHour.disabled = false;
+            alarmMin.disabled = false;
+            alarmSec.disabled = false;
+            alarmSession.disabled = false;
+
+            alarmAudio.pause();
+            alarmBtn.textContent = "Set Alarm";
+            activeAlarm = false;
         }
+
+
     }
 
     alarmMinSec(alarmSec);
@@ -80,5 +100,5 @@ const setAlarm = () => {
     alarmHr(alarmHour);
 }
 
-setAlarm();
 clockTime();
+setAlarm();
